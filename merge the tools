@@ -1,0 +1,19 @@
+# Ajlan-Al-Kaabi
+echo "# CODE" >> README.md
+git initdef merge_the_tools(string, k):
+    a=len(string)//k
+    #Run through each t_i
+    for x in range(a):
+        tempStr=str(string[k*x:k*(x+1)])
+        tempList=list(tempStr)
+        #Procedure to get u_i
+        for y in tempList:
+            while tempStr.count(y)>1:
+                del tempList[tempStr.rfind(y)]
+                tempStr="".join(tempList)
+        print("".join(tempList))
+if __name__ == '__main__':
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/amkaabi/CODE.git
+git push -u origin master
